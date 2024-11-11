@@ -254,13 +254,13 @@ There are only two values valid for $a'$ that satisfy $L + uA + u^2R = a'(uG_1 +
 Instead of combining $a_1$ and $a_2$ together as $a_1 + a_2u$, the prover combines them as $a' = a_1u + a_2u^{-1}$ and the verifier does $G' = u^{-1}G_1 + u G_2$. Note that the powers of the two vectors are applied in the opposite order. When we compute the outer product, the inner product terms will have the $uu^{-1}$ cancel:
 
 $$
-[a_1u, u^{-1}a_2] \otimes [u^{-1}G_1, uG_2]=
+[a_1u, a_2u^{-1}] \otimes [u^{-1}G_1, uG_2]=
 \begin{array}{|c| c c|}
 \hline
-& ua_1 & u^{-1}a_2 \\
+& a_1u & a_2u^{-1} \\
 \hline
-G_1u^{-1} & \color{green}{a_1G_1} & a_1G_2u^2 \\
-G_2u & a_2G_1u^{-2} & \color{green}{a_2G_2} \\
+u^{-1}G_1 & \color{green}{a_1G_1} & a_2u^{-2}G_1 \\
+uG_2 & a_1u^{2}G_2 & \color{green}{a_2G_2} \\
 \hline
 \end{array}
 $$
