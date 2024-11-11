@@ -268,7 +268,7 @@ $$
 Arguably, this approach is "cleaner" so we will use that going forward.
 
 ### Introducing $\mathsf{fold}(\mathbf{a},x)$
-The computation $a_1x + a_2x^{-1}$ happens so frequently in Bulletproofs that it is handy to give it a name, which we call $\mathsf{fold}(\mathbf{a},x)$. The first argument $\mathbf{a}$ is the vector we are folding (which must be of even length, if not we pad it with a $0$). Fold splits the vector $\mathbf{a}$ of length $n$ into $n/2$ pairs, and returns a vector of length $n/2$ as follows:
+The computation $a_1x + a_2x^{-1}$ happens so frequently in Bulletproofs that it is handy to give it a name, which we call $\mathsf{fold}(\mathbf{a},x)$. The first argument $\mathbf{a}$ is the vector we are folding (which must have length that is a power of 2, if not we pad it with a $0$). Fold splits the vector $\mathbf{a}$ of length $n$ into $n/2$ pairs, and returns a vector of length $n/2$ as follows:
 
 $$\mathsf{fold}(\mathbf{a}, x)=[a_1x+a_2x^{-1},a_3x+a_4x^{-1},\dots,a_{n-1}x+a_nx^{-1}]$$
 
